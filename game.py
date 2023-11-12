@@ -1,12 +1,12 @@
 """Точка входа в игру."""
-from libs.stack import Stack
+from libs.deck import Deck
 
 
 def main():
     """Основная логика игры."""
     print("Карточная игра")
-    stack = Stack()
-    print(stack)
+    deck = Deck()
+    print(deck)
 
 
 if __name__ == '__main__':
