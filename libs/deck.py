@@ -24,6 +24,7 @@ class Deck:
 
     def is_empty(self) -> bool:
         """Проверяет, пуста ли кололда."""
+        return len(self.cards) == 0
 
     def get_trump_card(self):
         """Определить козырную карту."""
