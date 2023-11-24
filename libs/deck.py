@@ -1,5 +1,6 @@
 """Колода."""
 from itertools import product
+from random import shuffle
 
 from libs.cards import Card
 from config import VALUES, SUITS
@@ -18,6 +19,7 @@ class Deck:
 
     def shuffle_the_deck(self):
         """Перемешать колоду."""
+        return shuffle(self.cards)
 
     def get_cards(self, count: int) -> list[Card]:
         """Выдать карты."""
@@ -27,3 +29,4 @@ class Deck:
 
     def get_trump_card(self):
         """Определить козырную карту."""
+
