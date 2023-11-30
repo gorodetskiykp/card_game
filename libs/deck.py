@@ -9,8 +9,9 @@ class Deck:
     def __init__(self):
         self.cards = [Card(value, suit)
                       for value, suit in product(VALUES, SUITS)]
-        self.shuffle_the_deck()
         self.trump_card = None
+
+        self.shuffle_the_deck()
         self.get_trump_card()
 
     def __str__(self):
