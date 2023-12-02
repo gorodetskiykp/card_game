@@ -6,6 +6,7 @@ class Card:
         self.nominal_value = nominal_value
         self.suit = suit
         self.value = nominal_value + suit
+        self.owner = None
 
     def __str__(self):
         return self.value
