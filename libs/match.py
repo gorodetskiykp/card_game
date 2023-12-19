@@ -1,7 +1,8 @@
 from deck import Deck
 from players import Player
 
+
 class Match:
-    def __init__(self):
+    def __init__(self, *players: tuple[str]):
         self.deck = Deck()
-        self.players = [Player('1'), Player('2')]
+        self.players = [Player(name) for name in players]
