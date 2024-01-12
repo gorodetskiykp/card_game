@@ -1,9 +1,11 @@
 """Колода."""
 from itertools import product
 
+import self
+
 from libs.cards import Card
 from config import VALUES, SUITS
-from random import shuffle
+from random import choice, shuffle
 
 class Deck:
     def __init__(self):
@@ -30,3 +32,12 @@ class Deck:
 
     def get_trump_card(self):
         """Определить козырную карту."""
+        if self.trump_card is None:
+            self.trump_card = choice(self.cards)
+            while True:
+                if 'A' in str(self.trump_card):
+                    self.trump_card = choice(self.cards)
+                else:
+                    break
+            self.cards.remove(self.trump_card)
+            self.cards.append(self.trump_card)
